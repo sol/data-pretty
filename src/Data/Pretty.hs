@@ -11,7 +11,7 @@ import           Data.Text.Encoding (decodeUtf8)
 import           Data.String
 
 newtype Pretty a = Pretty {unPretty :: a}
-  deriving (Functor, Eq, Ord, IsString)
+  deriving (Functor, Eq, Ord, IsString, FromJSON, ToJSON)
  
 instance PrettyPrint a => Show (Pretty a) where
   show = prettyPrint . unPretty
