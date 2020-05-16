@@ -1,0 +1,23 @@
+name: data-pretty
+
+copyright: (c) 2020 Simon Hengel
+author: Simon Hengel <sol@typeful.net>
+maintainer: Simon Hengel <sol@typeful.net>
+
+ghc-options: -Wall
+
+dependencies:
+  - base == 4.*
+  - yaml
+
+library:
+  source-dirs: src
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs:
+      - test
+    dependencies:
+      - data-pretty
+      - hspec == 2.*
